@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>🌿 Un Pequeño Mundo para Salmita</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- Música principal -->
+
+<audio id="musicaInicio" loop>
+    <source src="{{ url_for('static', filename='audio/merry_go_round.mp3') }}">
+</audio>
+
+<!-- Música carta -->
+
+<audio id="musicaCarta" loop>
+    <source src="{{ url_for('static', filename='audio/tonari_totoro.mp3') }}">
+</audio>
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="moon"></div>
+
+    <div class="cloud cloud1"></div>
+    <div class="cloud cloud2"></div>
+
+    <div class="forest-layer"></div>
+
+    <div class="totoro-tree"></div>
+
+    <div class="mist"></div>
+
+    <div class="overlay">
+
+        <h1 class="fade-up">
+            Un Pequeño Mundo para Salmita
+        </h1>
+
+        <img
+        class="hero-salma fade-up"
+        src="{{ url_for('static', filename='img/totoro/foto1.jpeg') }}">
+
+        <p class="fade-up">
+
+           Como en las historias de Ghibli,
+           algunas personas aparecen una vez
+           y hacen que todo cambie para siempre.
+
+
+        </p>
+
+        <button onclick="iniciarViaje()">
+            🌿 Comenzar el viaje
+        </button>
+
+    </div>
+
+</section>
+
+<!-- COLORES -->
+
+<section class="capitulo fade-up">
+
+    <h2 class="fade-up">
+        🌻 Los Colores de Salmita
+    </h2>
+
+    <div class="galeria">
+
+        <img class="fade-up"
+        src="{{ url_for('static', filename='img/totoro/foto1.jpeg') }}">
+
+        <img class="fade-up"
+        src="{{ url_for('static', filename='img/totoro/foto2.jpeg') }}">
+
+    </div>
+
+    <p class="fade-up">
+
+        Algunas personas llenan el mundo de colores.
+
+        Y tú siempre has sido una de ellas.
+
+    </p>
+
+</section>
+
+<!-- LO QUE VEO -->
+
+<section class="capitulo fade-up">
+
+    <h2 class="fade-up">
+        🌻 Lo que veo cuando pienso en ti
+    </h2>
+
+    <p class="fade-up">
+
+        Pienso en los colores de una pintura.
+
+        En los campos iluminados por el sol.
+
+        En las historias que parecen simples,
+        pero terminan siendo inolvidables.
+
+    </p>
+
+</section>
+
+<!-- PELICULA GHIBLI -->
+
+<section class="capitulo fade-up">
+
+    <h2 class="fade-up">
+        ✨ Si fueras una película Ghibli
+    </h2>
+
+    <p class="fade-up">
+
+        Mi Vecino Totoro porque transmites tranquilidad.
+
+        Kiki porque eres creativa.
+
+        Chihiro porque has crecido sin perder tu esencia.
+
+        Y El Castillo Ambulante porque nunca has dejado de soñar.
+
+    </p>
+
+    <div class="galeria">
+
+        <img class="fade-up"
+        src="{{ url_for('static', filename='img/ghibli/foto8.jpeg') }}">
+
+        <img class="fade-up"
+        src="{{ url_for('static', filename='img/ghibli/foto9.jpeg') }}">
+
+    </div>
+
+</section>
+
+<!-- TOTORO -->
+
+<section class="capitulo bosque fade-up">
+
+    <h2 class="fade-up">
+        🌳 El Bosque de Totoro
+    </h2>
+
+    <div class="galeria">
+
+        <img class="fade-up"
+        src="{{ url_for('static', filename='img/totoro/foto3.jpeg') }}">
+
+        <img class="fade-up"
+        src="{{ url_for('static', filename='img/totoro/foto4.jpeg') }}">
+
+    </div>
+
+    <p class="fade-up">
+
+        Algunas personas son como los bosques de Totoro.
+
+        Tranquilas.
+
+        Mágicas.
+
+        Difíciles de olvidar.
+
+    </p>
+
+</section>
+
+<!-- ARTISTA -->
+
+<section class="capitulo fade-up">
+
+    <h2 class="fade-up">
+        🎨 Galería de Salmita
+    </h2>
+
+    <p class="fade-up">
+
+        Cada artista deja una huella.
+
+        Algunas en papel.
+
+        Otras en los recuerdos de las personas.
+
+    </p>
+
+    <div class="galeria">
+
+        <img class="fade-up"
+        src="{{ url_for('static', filename='img/artista/foto5.jpeg') }}">
+
+        <img class="fade-up"
+        src="{{ url_for('static', filename='img/artista/foto6.jpeg') }}">
+
+        <img class="fade-up"
+        src="{{ url_for('static', filename='img/artista/foto7.jpeg') }}">
+
+    </div>
+
+</section>
+
+<!-- RECUERDOS -->
+
+<section class="capitulo recuerdos fade-up">
+
+    <h2 class="fade-up">
+        📸 Nuestros Recuerdos
+    </h2>
+
+    <div class="galeria">
+
+        <img class="fade-up"
+        src="{{ url_for('static', filename='img/recuerdos/foto12.jpeg') }}">
+
+        <img class="fade-up"
+        src="{{ url_for('static', filename='img/recuerdos/foto13.jpeg') }}">
+
+        <img class="fade-up"
+        src="{{ url_for('static', filename='img/recuerdos/foto14.jpeg') }}">
+
+    </div>
+
+    <p class="fade-up">
+
+        Algunas personas llegan a nuestra vida.
+
+        Otras terminan formando parte de ella.
+
+    </p>
+
+</section>
+
+<!-- 18 AÑOS -->
+
+<section class="capitulo cumple fade-up">
+
+    <h2 class="fade-up">
+        🎂 18 años
+    </h2>
+
+    <p class="fade-up">
+
+        18 años de historias.
+
+        18 años de recuerdos.
+
+        18 años llenando de color el mundo
+        de quienes tienen la suerte de conocerte.
+
+    </p>
+
+    <br>
+
+    <p class="fade-up">
+
+        Hoy no termina un capítulo.
+
+        Comienza uno nuevo.
+
+    </p>
+
+</section>
+
+<!-- DESCRIBIR -->
+
+<section class="capitulo fade-up">
+
+    <h2 class="fade-up">
+        🌻 Si pudiera describirte
+    </h2>
+
+    <p class="fade-up">
+
+       Diría que eres como una tarde tranquila.
+
+       Como una pintura llena de colores.
+
+    <br><br>
+
+     Una chica diferente a las demás,
+     llena de alegría y emociones.
+
+    <br><br>
+
+     Eso es precisamente lo que te hace especial.
+
+    </p>
+
+</section>
+
+<!-- ARBOL -->
+
+<section class="arbol-sagrado fade-up">
+
+    <h2 class="fade-up">
+      🌳 El Gran Árbol de Totoro
+    </h2>
+
+    <p class="fade-up">
+
+      Dicen que algunos árboles guardan recuerdos.
+
+      Yo creo que este guarda cada risa,
+      cada conversación
+      y cada momento compartido.
+
+    </p>
+    <div class="tree-stars">
+
+      ✨ ✨ ✨
+
+    </div>
+
+    <div class="tree-container">
+
+        <img
+        src="{{ url_for('static', filename='img/totoro/arbol_totoro.webp') }}"
+        class="totoro-tree-img">
+
+        <div class="tree-glow"></div>
+
+    </div>
+
+</section>
+
+<!-- SECRETO -->
+
+<section class="capitulo fade-up">
+
+    <h2 class="fade-up">
+        ✨ Un pequeño secreto
+    </h2>
+
+    <button id="secret-btn">
+       ✨ Descubrir
+    </button>
+
+    <p id="secret-message">
+
+       🌻 Hay personas que pasan por nuestra vida.
+
+       💛 Y hay personas que terminan convirtiéndose
+      en un lugar al que siempre queremos volver.
+
+    </p>
+
+</section>
+
+<!-- CARTA -->
+ <section class="capitulo fade-up">
+
+    <h2>
+        🌙 Antes de terminar...
+    </h2>
+
+    <p>
+
+        Hay historias que terminan.
+
+        Otras simplemente continúan escribiéndose.
+
+        Y algunas personas se vuelven parte
+        de esas páginas para siempre.
+
+    </p>
+
+</section>
+
+<section class="capitulo final fade-up">
+
+    <h2 class="fade-up">
+        💌 Para Salmita
+    </h2>
+
+    <img
+    class="final-img fade-up"
+    src="{{ url_for('static', filename='img/final/nosotros 1.jpeg') }}">
+
+    <div class="carta-container">
+
+        <div class="sobre">
+          ✨💌✨
+        </div>
+
+        <div class="mensaje">
+
+    <p>
+
+        Mi querida Salmita:
+
+       Si llegaste hasta aquí, primero quiero darte las gracias por recorrer este pequeño mundo que construí para ti. Cada foto, cada detalle, cada color y cada rincón de esta página fue pensado con mucho cariño, porque quería regalarte algo diferente, algo que pudiera hacerte sonreír.
+
+       Han pasado ya cinco años desde que nos conocimos. A veces parece que fue ayer y otras veces parece que hubiera sido hace toda una vida. Todavía recuerdo cuando comenzamos a hablar y descubrimos que coincidíamos en muchas cosas: gustos, ideas, formas de ver el mundo e incluso ese tipo de chistes y payasadas que probablemente nadie más entendería, pero que para nosotros siempre terminaban siendo divertidos.
+
+       Con el tiempo entendí algo muy importante. La primera impresión que tuve de ti estaba equivocada. No eras una chica más entre tantas personas. Eras alguien especial. Una persona cariñosa, comprensiva, genuina y capaz de hacer sentir bien a quienes tienen la suerte de conocerte.
+
+       He visto cómo has crecido durante estos años. He visto cómo te has convertido en una persona más fuerte, más madura y más increíble sin perder esa esencia tan tuya que te hace única. Y sinceramente, es una de las cosas que más admiro de ti.
+
+       Quizás el tiempo, la distancia o las responsabilidades hagan que no podamos compartir tantos momentos como antes. Pero quiero que recuerdes algo: si algún día me buscas, estaré aquí. No importa cuándo sea, no importa dónde estés ni cuál sea la situación. Siempre encontrarás en mí a alguien dispuesto a escucharte, apoyarte y acompañarte.
+
+       Porque para mí no eres simplemente una amiga.
+
+       Eres esa hermana que la vida decidió poner en mi camino.
+
+       Eres una de esas personas que ocupan un lugar permanente en el corazón.
+
+       Y aunque los años sigan pasando, para mí siempre habrá una parte de ti que seguirá siendo aquella pequeña niña llena de ocurrencias, sueños, risas y locuras que nunca necesitaban explicación.
+
+       Hoy cumples 18 años y comienza una nueva etapa. Espero que la vivas con la misma alegría, creatividad y luz con la que siempre has iluminado a las personas que te rodean. Sigue soñando. Sigue creando. Sigue siendo tú.
+
+       Y cuando alguna vez dudes de lo importante que eres para alguien, recuerda que existe un pequeño mundo en algún rincón de internet que fue creado especialmente para ti.
+
+       Feliz cumpleaños, Salmita.
+
+       Con muchísimo cariño,
+
+       Jesús 🌻💛
+
+
+    </p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- DESPEDIDA -->
+
+<section class="capitulo despedida fade-up">
+
+    <h2 class="fade-up">
+        ✨ Feliz Cumpleaños Salmita ✨
+    </h2>
+
+    <p class="fade-up">
+
+        Gracias por seguir siendo esa persona
+        que convirtió una simple amistad
+        en uno de los recuerdos más bonitos
+        de mi vida.
+
+        🌻✨
+    </p>
+
+</section>
+<section class="creditos">
+
+    <div class="creditos-contenido">
+
+        <h2>✨ Fin del Viaje ✨</h2>
+
+        <img
+        class="creditos-foto"
+        src="{{ url_for('static', filename='img/final/nosotros2.jpeg') }}">
+
+        <h3>Para Salmita</h3>
+
+        <p>
+
+            Hecho con cariño,
+            recuerdos,
+            muchas noches de trabajo
+            y una amistad que creia imposible de encontrar
+            pero se definio con un solo nombre Salma.
+
+        </p>
+
+    </div>
+
+</section>
+
+<section class="fin-pelicula">
+
+    <h2>
+        🌙 Gracias por visitar este pequeño mundo
+    </h2>
+
+    <p>
+
+        Este lugar siempre tendrá una puerta abierta para ti.
+
+    </p>
+
+</section>
+<!-- EFECTOS -->
+
+<div class="fireflies"></div>
+
+<div class="leaves-container"></div>
+
+<div class="shooting-stars"></div>
+
+<div id="stars"></div>
+
+<div class="petals-container"></div>
+
+<!-- INTRO -->
+
+<div id="intro">
+
+    <div class="intro-text">
+
+        <p class="linea">
+            Hay personas que llenan el mundo de colores...
+        </p>
+
+        <p class="linea">
+            Personas que convierten momentos simples en recuerdos...
+        </p>
+
+        <p class="linea">
+            Y esta historia fue creada para una de ellas...
+        </p>
+
+        <h1 class="intro-nombre">
+            Salmita
+        </h1>
+
+    </div>
+
+</div>
+
+<p class="mensaje-final">
+
+   🌻 Si llegaste hasta aquí,
+   significa que recorriste cada rincón de este pequeño mundo.
+
+   Gracias por existir.
+
+</p>
+
+<!-- JS -->
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
